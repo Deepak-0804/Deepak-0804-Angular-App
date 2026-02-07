@@ -1,0 +1,27 @@
+<div class="container-fluid p-0">
+  @if (menuSubChild) {
+  <app-banner [title]="menuSubChild.title" [subtitle]="menuSubChild.subtitle"
+    [backgroundColor]="menuSubChild.backgroundColor" [backgroundImage]="menuSubChild.backgroundImage">
+  </app-banner>
+  }
+</div>
+
+
+<section class="mission-list">
+  @for (mission of missions; track mission.id) {
+  <article class="mission-card" [style.--card-bg]="mission.backgroundColor"
+    [style.--card-image]="'url(' + mission.imageUrl + ')'">
+    <h3>Research Report:</h3>
+    <div class="mission-content-layer">
+      <h4>{{ mission.title }}</h4>
+      <p>{{ mission.description }}</p>
+    </div>
+    <button (click)="onExpand(mission)" class="btn expandbtn">Expand</button>
+  </article>
+  }
+</section>
+@if (hasMore) {
+  <button (click)="loadMore()" class="btn load-more-btn">
+  Load More
+</button>
+}

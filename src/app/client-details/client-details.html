@@ -1,0 +1,25 @@
+<div class="client-details-overlay">
+  <div class="client-details-header">
+    <button (click)="dialogRef.close()">X</button>
+  </div>
+  <div class="client-details-body">
+    <h1>{{ details?.title }}</h1>
+    <p>{{ details?.subtitle }}</p>
+
+    <div class="logo-text-row">
+      <img [src]="details?.logoImageUrl" class="logo" alt="Logo">
+      <p class="text">{{ details?.description }}</p>
+    </div>
+
+    <div class="video-text-row">
+      @if(details?.videoPath){
+      <video class="video" controls autoplay muted>
+        <source [src]="details?.videoPath" type="video/mp4">
+      </video>
+      }
+      <p class="videotext">{{ details?.videoText }}</p>
+    </div>
+
+
+  </div>
+</div>

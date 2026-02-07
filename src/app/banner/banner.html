@@ -1,0 +1,16 @@
+<div class="hero" [ngStyle]="{ 'background-color': backgroundColor}">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+
+      <div class="col-md-6 content">
+        <h1>{{ title }}</h1>
+        @if (subtitle) {
+        <p>{{ subtitle }}</p>
+        }
+      </div>
+      <div class="col-md-6 hero-image">
+        <img src="/assets/signup-image.jpg" class="img-fluid mx-auto d-block" alt="Hero image">
+      </div>
+    </div>
+  </div>
+</div>

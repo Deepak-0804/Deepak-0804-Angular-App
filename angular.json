@@ -14,32 +14,32 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
+            "ssr": false,
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+                  "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "node_modules/swiper/swiper-bundle.min.css",
               "src/styles.css"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "5MB",
+                  "maximumError": "8MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -52,7 +52,13 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -64,7 +70,10 @@
               "buildTarget": "Angularproj:build:production"
             },
             "development": {
-              "buildTarget": "Angularproj:build:development"
+              "buildTarget": "Angularproj:build:development",
+              "ssl": true,
+              "sslKey": "ssl/key.pem",
+              "sslCert": "ssl/cert.pem"
             }
           },
           "defaultConfiguration": "development"
@@ -93,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5ce30657-6b8a-4954-9b11-6ccfa7963eba"
   }
 }

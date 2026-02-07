@@ -1,0 +1,137 @@
+@media (max-width: 767px) {}
+
+.description {
+    text-transform: capitalize;
+}
+
+.description h1 {
+    font-family: 'Arial Black', sans-serif;
+    color: darkblue;
+}
+
+.stat-card {
+    padding: 1rem;
+    border: 1px solid green;
+    margin: 10px;
+    background-color: aquamarine;
+    text-align: left;
+}
+
+.stat-card h1 {
+    font-family: cursive;
+}
+
+.multi-stat-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .stat-card h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-items {
+    display: flex;
+    justify-content: center;
+    flex-basis: 25%;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.flex-items svg {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.flex-items p b {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media (max-width: 1024px) and (min-width: 767px) {
+    .flex-items {
+        flex-basis: 50%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 374px) {
+    .flex-items {
+        flex-basis: 50%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .flex-items {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+.clients-section {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: #061838;
+    padding-bottom: 1rem;
+    color: white;
+
+}
+
+@media (max-width: 767px) {
+    .clients-header {
+        gap: 2rem;
+        
+    }
+}
+
+.clients-font p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 350px) {
+    .clients-font p {
+        font-size: 0.9rem;
+    }
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 767px) {
+    .clients-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

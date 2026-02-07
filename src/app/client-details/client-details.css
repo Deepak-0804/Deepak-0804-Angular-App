@@ -1,0 +1,175 @@
+.client-details-overlay {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 30px;
+    overflow-y: auto;
+}
+
+.client-details-header {
+    flex: 0 0 auto;
+    align-self: flex-start;
+}
+
+.client-details-body {
+    background: #007cc2;
+    color: white;
+    padding: 2%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .client-details-body h1 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 425px) {
+    .client-details-body h1 {
+        font-size: 12px;
+    }
+
+    .client-details-body p {
+        font-size: 10px;
+    }
+
+}
+
+.logo-text-row {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5vw;
+}
+
+.logo {
+    flex: 0 0 auto;
+    width: 15vw;
+    height: auto;
+}
+
+.text {
+    flex: 1 1 0;
+    font-size: 26px;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .logo-text-row {
+        gap: 5vw;
+    }
+
+    .logo {
+        width: 20vw;
+        height: auto;
+    }
+
+    .text {
+        font-size: 17px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .logo-text-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 5vh;
+    }
+
+    .logo {
+        width: 40vw;
+        height: auto;
+    }
+
+    .text {
+        font-size: 17px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+    .text {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+
+.video-text-row {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3vw;
+}
+
+.video {
+    flex: 0 0 auto;
+    width: 28vw;
+    height: 35vh;
+}
+
+.videotext {
+    flex: 1 1 0;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .video {
+        width: 30vw;
+        height: auto;
+    }
+
+    .videotext {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .video {
+        width: 35vw;
+        height: auto;
+    }
+
+    .videotext {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .video-text-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video {
+        width: 68vw;
+        height: auto;
+    }
+
+    .videotext {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+
+     .video {
+        width: 62vw;
+        height: auto;
+    }
+    .videotext {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}

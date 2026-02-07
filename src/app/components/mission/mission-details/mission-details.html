@@ -1,0 +1,9 @@
+<p>mission-details works!</p>
+
+@if (missionDetails$ | async; as missionDetails) {
+<div>
+    <h2>{{ missionDetails.title }}</h2>
+    <p>{{ missionDetails.description }}</p>
+    <img [src]="missionDetails.imageUrl" [alt]="missionDetails.title">
+</div>
+}

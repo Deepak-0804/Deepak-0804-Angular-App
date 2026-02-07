@@ -1,0 +1,118 @@
+.mission-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    padding : 1rem;
+}
+
+.mission-card {
+    width: 300px;
+    height: 450px;
+    padding: 1rem;
+    color: white;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+    background-color: var(--card-bg);
+}
+
+.mission-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mission-card .expandbtn:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.mission-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+        var(--card-image);
+
+}
+
+.mission-card:hover::before {
+    transform: translate(40px, 40px) scale(1.5);
+    opacity: 0;
+}
+
+.mission-card>h3,
+.mission-card>.mission-content-layer {
+    position: relative;
+    z-index: 1;
+}
+
+.mission-content-layer {
+    padding: 0.5rem;
+}
+
+.mission-card p {
+    margin-top: 2rem;
+    transform: translateX(300px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.mission-card:hover p {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.expandbtn {
+    position: absolute;
+    bottom: 2rem;
+    right: 4rem;
+    color: white;
+    z-index: 2;
+    font-weight: bold;
+    font-size: large;
+
+    transform: translateY(2rem);
+    opacity: 0;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.mission-card:hover .expandbtn {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.expandbtn:hover {
+    cursor: pointer;
+}
+
+
+.load-more-btn {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}

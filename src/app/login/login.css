@@ -1,0 +1,6 @@
+.fullscreen-img {
+    height: 100vh;
+    background-image: url('/assets/login-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}

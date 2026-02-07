@@ -1,0 +1,50 @@
+<!-- 🔹 Topbar -->
+<div class="topbar bg-secondary text-light py-1 small">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+    <!-- Left block: contact info -->
+    <div class="mb-2 mb-md-0">
+      📞 +91 98765 43210 | ✉️ info@company.com
+    </div>
+
+    <!-- Right block: links -->
+    <div>
+      <a href="#" class="text-light me-2">Careers</a>
+      <a href="#" class="text-light me-2">Support</a>
+      <a href="#" class="text-light">LinkedIn</a>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- 🔹 Main Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark main-navbar" [ngClass]="{'navbar-fixed': isFixed}">
+  <div class="container-fluid px-2 py-2">
+    <a class="navbar-brand" href="index.html">
+      <img src="/assets/logo.jpg" alt="Company Logo" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/layout/home']">Home</a></li>
+        <li *ngFor="let item of menuItems" class="nav-item dropdown" (mouseenter)="loadChildren(item); item.open = true"
+          (mouseleave)="item.open = false">
+
+          <a class="nav-link">{{ item.label }}</a>
+
+          <ul class="dropdown-menu show" *ngIf="item.open && item.children.length">
+            <li *ngFor="let child of item.children">
+              <a class="dropdown-item" [routerLink]="child.route">
+                <i [class]="child.icon" [style.color]="child.color"></i> {{ child.label }}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,53 @@
+.header{
+    align-items: center;
+    background: #2d394b;
+    display: flex;
+    height: 60px;
+    left: 0;
+    padding: 10px 70px 10px 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    top: 10px;
+}
+.devices {
+    display: flex;
+    gap: 10px; /* space between buttons */
+    position: absolute;
+    left: 50%;
+}
+.device-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center the SVG */
+  width: 40px;
+  height: 40px;             /* clickable area */
+  padding: 4px;             /* spacing around SVG */
+  border: none;
+  background: transparent;  /* no default button look */
+  cursor: pointer;          /* shows it’s clickable */
+}
+.device-btn:hover {
+  background-color: rgba(0,0,0,0.05); /* subtle hover effect */
+}
+
+.frame-toggler-btn {
+    background: #2d394b;
+    border: 1px solid #99a6b999;
+    border-radius: 0 0 3px 3px;
+    border-top: none;
+    cursor: pointer;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    width: 40px;
+    z-index: 25;
+}
+.frame-toggler-btn-icon {
+    color: white;
+}
+
+section {
+    display: flex;
+}

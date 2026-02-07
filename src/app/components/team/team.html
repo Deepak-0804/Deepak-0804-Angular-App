@@ -1,0 +1,11 @@
+<div class="container-fluid p-0">
+
+@if (menuSubChild) {
+  <app-banner
+    [title]="menuSubChild.title"
+    [subtitle]="menuSubChild.subtitle"
+    [backgroundColor]="menuSubChild.backgroundColor"
+    [backgroundImage]="menuSubChild.backgroundImage">
+  </app-banner>
+}
+</div>
