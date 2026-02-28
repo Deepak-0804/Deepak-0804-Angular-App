@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Header } from '../header/header';
-import { features } from 'process';
 import { Features } from '../features/features';
 import { Testimonials } from '../testimonials/testimonials';
 import { Contact } from '../contact/contact';
